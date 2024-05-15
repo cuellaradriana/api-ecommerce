@@ -12,9 +12,6 @@ import { CreateOrderDto } from './dto/createOrder.dto';
 import { Order } from '../../entities/orders.entity';
 import { AuthGuard } from '../auth/guards/auth.guard';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
-import { Roles } from '../../decorators/role.decorator';
-import { Role } from '../auth/role/role.enum';
-import { RolesGuard } from '../auth/guards/roles.guard';
 import { DecodeTokenGuard } from '../auth/guards/decodeToken.guard';
 
 @ApiTags('orders')

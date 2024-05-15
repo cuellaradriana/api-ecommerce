@@ -54,8 +54,6 @@ export class UsersController {
   @Get(':id')
   @UseInterceptors(ExcludePasswordInterceptor)
   @UseGuards(DecodeTokenGuard)
-  @Roles(Role.Admin)
-  @UseGuards(RolesGuard)
   async getUserById(@Param('id', ParseUUIDPipe) id: string): Promise<User> {
     return await this.usersService.getUserById(id);
   }
